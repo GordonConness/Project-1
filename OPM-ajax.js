@@ -1,12 +1,7 @@
-// submit/search button selector for location. (example, need to verify button selector with team)
+// *OpenWeatherMap JS file used to manipulate DOM and retrieve API information, as well as make use of JqueryUI selectable method for City List* 
 
-//let location = $("#location").val();
-//let location;
-// combine location input with API url to create "queryURL"
-//let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&units=imperial&APPID=9082a48918ffcc2e91530e4ffabb6e1e"
-
-
-// defining variables outside of ajax call to avoid scope issues
+// defining variables outside of ajaxCall and other functions to avoid scope issues
+let cityLocation;
 let mainWeather;
 let weatherDescription;
 let temp;
@@ -15,6 +10,7 @@ let city;
 let country;
 let longitude;
 let latitude;
+// City array list we will use and loop through in our for loop to create list items and assign data-names
 let cityArray= ["New York", "Los Angeles", "Chicago", "Huston", "Phoenix"]
 
 
@@ -22,33 +18,38 @@ let cityArray= ["New York", "Los Angeles", "Chicago", "Huston", "Phoenix"]
 
 $(document).ready(function(){
 
+    // function generates list items from cityArray and assigns them a data-name attr. matching their name, then appends them to the page
     function generateList () {
         for (var i = 0; i < cityArray.length; i++) {
             let list = $("<li>");
-            list.addClass("selector");
+            list.addClass("ui-widget-content");
             list.attr("data-name", cityArray[i]);
             list.text(cityArray[i]);
             $("#selectable").append(list);
         };
-
-        $(".selector").on("click", function(){
-            location = $(this).attr("data-name");
+        
+        // On click function for each list item, uses data-name to assign to variable cityLocation to use inside queryURL when ajaxCall function is called inside this on click
+        $(".ui-widget-content").on("click", function(){
+            cityLocation = $(this).attr("data-name");
             ajaxCall()
 
         });
     };
 
-    $("#selectable").selectable();
-    $( ".selector" ).selectable( "enable" );
+    // Used to utilize jqueryUI selectable function
+    $(function() {
+        $('#selectable').selectable();
+    });
 
+    // Used to call generateList to create list items and assign data-names on page load
     generateList();
 
 
-
+    // Function in which our ajax call is defined accessing OpenWeatherMap API data based on cityLocation [wrapped in function to call inside on click function]
     function ajaxCall () {
         
 
-        let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&units=imperial&APPID=9082a48918ffcc2e91530e4ffabb6e1e"
+        let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityLocation + "&units=imperial&APPID=9082a48918ffcc2e91530e4ffabb6e1e"
 
         // AJAX call to retrieve API data
         $.ajax({
@@ -90,8 +91,9 @@ $(document).ready(function(){
             latitude = RD.coord.lat;
             console.log(latitude);
 
-            $("#city").text(city);
-            $("#temp").text("Temp: " + temp);
+            // Used to manipulate DOM with API information
+            $("#CityName").text(city);
+            $("#temperature").text("Temp: " + temp + " degrees Fahrenheit");
             $("#description").text("Weather Description: " + weatherDescription);
         });
 
@@ -103,7 +105,7 @@ $(document).ready(function(){
     };
 
 
-    //example of possible conditional statement
+    //example of possible conditional statement we could make use of
 
     if( mainWeather == "rainy" && temp <= 50 || mainWeather == "snow" && temp <= 50 ) {
         console.log("Dress warm!")

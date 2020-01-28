@@ -1,0 +1,44 @@
+#feedback {
+  font-size: 1.4em;
+}
+
+/* removed due to strange highlighting offset, and extending past city name length */
+#selectable .ui-selecting {
+  
+}
+
+/* *Bryan edit = added font-weight: bold to selected items to make them stand out a bit more */
+#selectable .ui-selected {
+    font-weight: bold;
+    font-size: 24px;
+  color: rgb(224, 28, 28);
+}
+
+#selectable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  
+}
+
+
+/* *Bryan edit = removed "#selectable li" took care of the offset issue we had before, spacing bewteen city list can now be tweeked (i couldn't adjust the spacing before) */
+.ui-widget-content{
+    margin: 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* *Bryan edit = created p tag between <ul> tags to manipulate text w/o effecting <li> items */
+#ul-p-text {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+/* *Bryan edit = Added a cursor change on hover & transform/transition to make hovered items more dynamic */
+#selectable li:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    transition: transform 150ms;
+}

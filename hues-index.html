@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!--Css-->
+
+    <!-- *Bryan edit* = changed this file path to avoid creating assets folder, ignore this change-->
+    <link rel="stylesheet" href="style.css" />
+    <!--JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--JQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <title>Went</title>
+  </head>
+  <body>
+    <!--Title-->
+    <div class="jumbotron jumbotron-fluid text-center bg-dark">
+      <div class="container">
+        <h1 class="display-1 font-weight-bold text-white">WENT</h1>
+        <p class="lead font-weight-bold text-white">
+          where your Weather and Events are at a glance
+        </p>
+      </div>
+    </div>
+
+    <!--Search and Display Weather-->
+
+    <div class="card">
+      <h2 class="card-header bg-dark text-white text-center">
+        Current Weather
+      </h2>
+      <div class="card-body">
+        <!--Display current weather-->
+        <div class="row justify-content-center">
+          <div class="card mb-3 border-0" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+             
+              </div>
+              <!-- *Bryan edit* = removed text so it can be changed with JS DOM manipulation-->
+              <div class="col-md-8">
+                <div class="card-body text-center">
+                  <h3 id="CityName" class="card-title font-weight-bold">
+                   
+                  </h3>
+                  <!-- *Bryan edit* = spelling error on temperature, corrected to match JS selector name-->
+                  <p id="temperature" class="card-text font-weight-bold">
+                    
+                  </p>
+                  <p id="description" class="card-text font-weight-bold">
+                   
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- *Bryan edit* = removed list items to append to page, put <p> tag in between list items so we could style this text without effecting each <li> as well-->
+        <ul id="selectable">
+           <p id= "ul-p-text">Select a City to get the Weather</p>
+        </ul>
+
+        <!--card body div-->
+      </div>
+    </div>
+
+    <br />
+
+    <!--Events 1-->
+
+    <!-- *Bryan edit* = removed pictures just so i wouldn't have to set up an asset file like you had [this goes for ALL file links too, so ignore those changes]-->
+    <div id="effectTypes" class="card-group">
+      <div class="card p-2 m-1 bg-dark">
+        
+        <div class="card-body text-white font-weight-bold">
+          <h5 id="title1" class="card-title">2020 Super Bowl</h5>
+          <p id="location1" class="card-text">
+            Location: Kansas City
+          </p>
+          <p id="date1" class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p id="time1" class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p id="link1" class="card-text">
+            Ticket Master Link
+          </p>
+        </div>
+      </div>
+      <div class="card p-2 m-1 bg-dark">
+        
+        <div class="card-body text-white font-weight-bold">
+          <h5 id="title2" class="card-title">2020 Super Bowl</h5>
+          <p id="location2" class="card-text">
+            Location: Kansas City
+          </p>
+          <p id="date2" class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p id="time2" class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p id="link2" class="card-text">
+            Ticket Master Link
+          </p>
+        </div>
+      </div>
+      <div class="card p-2 m-1 bg-dark">
+     
+        <div class="card-body font-weight-bold text-white">
+          <h5 id="title3" class="card-title">2020 Super Bowl</h5>
+          <p id="location3" class="card-text">
+            Location: Kansas City
+          </p>
+          <p id="date3" class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p id="time3" class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p id="link3" class="card-text">
+            Ticket Master Link
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <!--Events 2-->
+
+    <div class="card-group">
+      <div class="card p-2 m-1 bg-dark">
+       
+        <div class="card-body text-white font-weight-bold">
+          <h5 id="title4" class="card-title">2020 Super Bowl</h5>
+          <p id="location4" class="card-text">
+            Location: Kansas City
+          </p>
+          <p id="date4" class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p id="time4" class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p id="link4" class="card-text">
+            Ticket Master Link
+          </p>
+        </div>
+      </div>
+      <div class="card p-2 m-1 bg-dark">
+      
+        <div class="card-body text-white font-weight-bold">
+          <h5 id="title5" class="card-title">2020 Super Bowl</h5>
+          <p id="location5" class="card-text">
+            Location: Kansas City
+          </p>
+          <p id="date5" class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p id="time5" class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p id="link5" class="card-text">
+            Ticket Master Link
+          </p>
+        </div>
+      </div>
+      <div class="card p-2 m-1 bg-dark">
+       
+        <div class="card-body font-weight-bold text-white">
+          <h5 id="title6" class="card-title">2020 Super Bowl</h5>
+          <p class="card-text">
+            Location: Kansas City
+          </p>
+          <p id="date6" class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p id="time6" class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p id="link6" class="card-text">
+            Ticket Master Link
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <!--Footer-->
+    <div class="card">
+      <h5 class="card-header text-center text-white bg-dark p-5">
+        Copyright &copy; 2020
+      </h5>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- *Bryan edit* = changed file path to avoid creating assets folder, ignore this change-->
+    <script src="OPM-ajax.js"></script>
+  </body>
+</html>
