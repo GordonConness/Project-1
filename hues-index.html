@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <title>WeEnt</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="OPM-ajax.js"></script>
+
+  </head>
+  <body>
+    <!--Title-->
+    <div class="jumbotron jumbotron-fluid text-center bg-dark">
+      <div class="container">
+        <h1 class="display-1 font-weight-bold text-white">WENT</h1>
+        <p class="lead font-weight-bold text-white">
+          where your Weather and Event is at a glance
+        </p>
+      </div>
+    </div>
+
+    <!--Search and Display Weather-->
+
+    <div class="card">
+      <h2 class="card-header bg-dark text-white">Current Weather</h2>
+      <div class="card-body">
+        <!--Display current weather-->
+        <div class="row justify-content-center">
+          <div class="card mb-3 border-0" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+               <!--<img
+                  src="assets/images/cloudy.jpg"
+                  class="card-img"
+                  alt="Party Cloudy"
+                />-->
+              </div>
+              <div class="col-md-8">
+                <div class="card-body text-center">
+                  <h3 id="city" class="card-title font-weight-bold"></h3>
+                  <p id="temp"class="card-text font-weight-bold">
+                    
+                  </p>
+                  <p id="description" class="card-text font-weight-bold">
+                   
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Search-->
+        <form class="form-inline justify-content-center">
+          <div class="form-group mb-2">
+            <h4>Search</h4>
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <input
+              type="text"
+              class="form-control"
+              id="location"
+              placeholder="City, State"
+            />
+            <input id="submit" type="submit" value="Search">
+          </div>
+          
+        </form>
+        <!--card body div-->
+      </div>
+    </div>
+
+    <br />
+
+    <!--Events 1-->
+
+    <div class="card-group">
+      <div class="card p-2 m-1 bg-dark">
+        <!--<img
+          src="assets/images/super.jpg"
+          class="card-img-top rounded-lg"
+          alt="Super Bowl"
+        />-->
+        <div class="card-body text-white font-weight-bold">
+          <h5 class="card-title">2020 Super Bowl</h5>
+          <p class="card-text">
+            Location: Kansas City
+          </p>
+          <p class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p class="card-text">
+            Price: $2,000 per ticket
+          </p>
+        </div>
+      </div>
+      <div class="card p-2 m-1 bg-dark">
+       <!-- <img
+          src="assets/images/super.jpg"
+          class="card-img-top"
+          alt="Super Bowl"
+        />-->
+        <div class="card-body text-white font-weight-bold">
+          <h5 class="card-title">2020 Super Bowl</h5>
+          <p class="card-text">
+            Location: Kansas City
+          </p>
+          <p class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p class="card-text">
+            Price: $2,000 per ticket
+          </p>
+        </div>
+      </div>
+      <div class="card p-2 m-1 bg-dark">
+       <!-- <img
+          src="assets/images/super.jpg"
+          class="card-img-top"
+          alt="Super Bowl"
+        />-->
+        <div class="card-body font-weight-bold text-white">
+          <h5 class="card-title">2020 Super Bowl</h5>
+          <p class="card-text">
+            Location: Kansas City
+          </p>
+          <p class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p class="card-text">
+            Price: $2,000 per ticket
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <!--Events 2-->
+
+    <div class="card-group">
+      <div class="card p-2 m-1 bg-dark">
+       <!-- <img
+          src="assets/images/super.jpg"
+          class="card-img-top rounded-lg"
+          alt="Super Bowl"
+        />-->
+        <div class="card-body text-white font-weight-bold">
+          <h5 class="card-title">2020 Super Bowl</h5>
+          <p class="card-text">
+            Location: Kansas City
+          </p>
+          <p class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p class="card-text">
+            Price: $2,000 per ticket
+          </p>
+        </div>
+      </div>
+      <div class="card p-2 m-1 bg-dark">
+      <!--  <img
+          src="assets/images/super.jpg"
+          class="card-img-top"
+          alt="Super Bowl"
+        />-->
+        <div class="card-body text-white font-weight-bold">
+          <h5 class="card-title">2020 Super Bowl</h5>
+          <p class="card-text">
+            Location: Kansas City
+          </p>
+          <p class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p class="card-text">
+            Price: $2,000 per ticket
+          </p>
+        </div>
+      </div>
+      <div class="card p-2 m-1 bg-dark">
+      <!--  <img
+          src="assets/images/super.jpg"
+          class="card-img-top"
+          alt="Super Bowl"
+        />-->
+        <div class="card-body font-weight-bold text-white">
+          <h5 class="card-title">2020 Super Bowl</h5>
+          <p class="card-text">
+            Location: Kansas City
+          </p>
+          <p class="card-text">
+            Date: Sunday, 2/2/2020
+          </p>
+          <p class="card-text">
+            Time: 5:40 PM
+          </p>
+          <p class="card-text">
+            Price: $2,000 per ticket
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <!--Footer-->
+    <div class="card">
+      <h5 class="card-header text-center text-white bg-dark p-5">
+        Copyright &copy; 2020
+      </h5>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <!-- <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
