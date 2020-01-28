@@ -15,15 +15,38 @@ let city;
 let country;
 let longitude;
 let latitude;
+let cityArray= ["New York", "Los Angeles", "Chicago", "Huston", "Phoenix"]
+
 
 
 
 $(document).ready(function(){
 
-    $("#submit").on("click", function(event){
-        event.preventDefault();
+    function generateList () {
+        for (var i = 0; i < cityArray.length; i++) {
+            let list = $("<li>");
+            list.addClass("selector");
+            list.attr("data-name", cityArray[i]);
+            list.text(cityArray[i]);
+            $("#selectable").append(list);
+        };
 
-       let location = $("#location").val().trim().toLowerCase();
+        $(".selector").on("click", function(){
+            location = $(this).attr("data-name");
+            ajaxCall()
+
+        });
+    };
+
+    $("#selectable").selectable();
+    $( ".selector" ).selectable( "enable" );
+
+    generateList();
+
+
+
+    function ajaxCall () {
+        
 
         let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&units=imperial&APPID=9082a48918ffcc2e91530e4ffabb6e1e"
 
@@ -77,7 +100,7 @@ $(document).ready(function(){
 
 
 
-    });
+    };
 
 
     //example of possible conditional statement
