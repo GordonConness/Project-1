@@ -34,6 +34,7 @@ $(document).ready(function(){
             cityLocation = $(this).attr("data-name");
             ajaxCall()
             
+            // messing with Anime.js to offset selected city...needs work
             anime({
                 targets: ".ui-widget-content",
                 translateX: 250
@@ -104,6 +105,7 @@ $(document).ready(function(){
             $("#temperature").text("Temp: " + temp + " degrees Fahrenheit");
             $("#description").text("Weather Description: " + weatherDescription);
 
+            // Variables to compare API weather ID "weatherID" to for icon
             let rainyArray = [500, 501, 502, 503, 504];
             let drizzleArray = [300, 301, 302, 310, 311, 312, 313, 314, 321, 520, 521, 522, 531];
             let snowyArray = [600, 601, 602, 611, 612, 613, 615, 616, 620, 621, 622, 511];
@@ -115,7 +117,7 @@ $(document).ready(function(){
             let heavyCloudArray = [803, 804];
 
 
-
+            // for loops to loop through each array, and compare "weatherID" to number from each array, conditional statement in each for loop to change img url to icon matching "weatherID".
             for (var a = 0; a < rainyArray.length; a++) {
                 if (weatherID == rainyArray[a]) {
                     $("#img").attr("src", "http://openweathermap.org/img/wn/10d@2x.png");
@@ -152,6 +154,7 @@ $(document).ready(function(){
                 };
             };
 
+            // else if conditional statement for variables that are nto arrays, to change img url to icon matching "weatherID".
             if (weatherID == clearSky) {
                 $("#img").attr("src", "http://openweathermap.org/img/wn/01d@2x.png");
             } else if (weatherID == fewClouds) {
