@@ -40,7 +40,8 @@ $(document).ready(function(){
             // messing with Anime.js to offset selected city
             anime({
                 targets: this,
-                translateX: 150
+                translateX: 550,
+                scale: 2,
             });
             
         });
@@ -108,7 +109,7 @@ $(document).ready(function(){
 
             // Used to manipulate DOM with API information
             $("#CityName").text(city);
-            $("#temperature").text("Temp: " + temp + " degrees Fahrenheit");
+            $("#temperature").html("Temp: " + temp + " &#x2109"); // has to be .html to get degrees fahrenheit symbol to show
             $("#description").text("Weather Description: " + weatherDescription);
 
             // Variables to compare API weather ID "weatherID" to for icon img
