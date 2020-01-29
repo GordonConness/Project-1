@@ -33,12 +33,16 @@ $(document).ready(function(){
         $(".ui-widget-content").on("click", function(){
             cityLocation = $(this).attr("data-name");
             ajaxCall()
+
+            // returns siblings to original position so only current city is animated to the right... sometimes buggy if clicking through links too quickly
+            $(this).siblings().css({transform: "translatex(0)", transition: "transform 200ms" });
             
-            // messing with Anime.js to offset selected city...needs work
+            // messing with Anime.js to offset selected city
             anime({
-                targets: ".ui-widget-content",
-                translateX: 250
-              });
+                targets: this,
+                translateX: 150
+            });
+            
         });
     };
 
@@ -46,6 +50,8 @@ $(document).ready(function(){
     $(function() {
         $('#selectable').selectable();
     });
+
+   
 
     // Used to call generateList to create list items and assign data-names on page load
     generateList();
@@ -105,7 +111,7 @@ $(document).ready(function(){
             $("#temperature").text("Temp: " + temp + " degrees Fahrenheit");
             $("#description").text("Weather Description: " + weatherDescription);
 
-            // Variables to compare API weather ID "weatherID" to for icon
+            // Variables to compare API weather ID "weatherID" to for icon img
             let rainyArray = [500, 501, 502, 503, 504];
             let drizzleArray = [300, 301, 302, 310, 311, 312, 313, 314, 321, 520, 521, 522, 531];
             let snowyArray = [600, 601, 602, 611, 612, 613, 615, 616, 620, 621, 622, 511];
@@ -118,36 +124,38 @@ $(document).ready(function(){
 
 
             // for loops to loop through each array, and compare "weatherID" to number from each array, conditional statement in each for loop to change img url to icon matching "weatherID".
+            
+            // rainyArray for img "10d"
             for (var a = 0; a < rainyArray.length; a++) {
                 if (weatherID == rainyArray[a]) {
                     $("#img").attr("src", "http://openweathermap.org/img/wn/10d@2x.png");
                 };
             };
-
+            // drizzleArray for img "09d"
             for (var b = 0; b < drizzleArray.length; b++) {
                 if (weatherID == drizzleArray[b]) {
                     $("#img").attr("src", "http://openweathermap.org/img/wn/09d@2x.png");
                 };
             };
-
+            // snowyArray for img "13d"
             for (var c = 0; c < snowyArray.length; c++) {
                 if (weatherID == snowyArray[c]) {
                     $("#img").attr("src", "http://openweathermap.org/img/wn/13d@2x.png");
                 };
             };
-
+            // atmosphereArray for img "50d"
             for (var d = 0; d < atmosphereArray.length; d++) {
                 if (weatherID == atmosphereArray[d]) {
                     $("#img").attr("src", "http://openweathermap.org/img/wn/50d@2x.png");
                 };
             };
-
+            // stormyArray for img "11d"
             for (var e = 0; e < stormyArray.length; e++) {
                 if (weatherID == stormyArray[e]) {
                     $("#img").attr("src", "http://openweathermap.org/img/wn/11d@2x.png");
                 };
             };
-
+            // heavyCloudArray for img "04d"
             for (var f = 0; f < heavyCloudArray.length; f++) {
                 if (weatherID == heavyCloudArray[f]) {
                     $("#img").attr("src", "http://openweathermap.org/img/wn/04d@2x.png");
@@ -155,29 +163,30 @@ $(document).ready(function(){
             };
 
             // else if conditional statement for variables that are nto arrays, to change img url to icon matching "weatherID".
+
+            // clearySky for img "01d"
             if (weatherID == clearSky) {
                 $("#img").attr("src", "http://openweathermap.org/img/wn/01d@2x.png");
+
+            // fewClouds for img "02d"  
             } else if (weatherID == fewClouds) {
                 $("#img").attr("src", "http://openweathermap.org/img/wn/02d@2x.png");
+
+            // scatClouds for img "03d"
             } else if (weatherID == scatClouds) {
                 $("#img").attr("src", "http://openweathermap.org/img/wn/03d@2x.png");
             };
+
+            //example of possible conditional statement we could make use of
+
+            if( temp <= 50) {
+                console.log("Dress warm!")
+            } else if ( temp >= 70 ) {
+                console.log("Its nice out today!")
+            };
+
         });
 
-
-        
-
-
-
-    };
-
-
-    //example of possible conditional statement we could make use of
-
-    if( mainWeather == "rainy" && temp <= 50 || mainWeather == "snow" && temp <= 50 ) {
-        console.log("Dress warm!")
-    } else if ( mainWeather == "sunny" && temp >= 70 ) {
-        console.log("Its nice out today!")
     };
 
 })
