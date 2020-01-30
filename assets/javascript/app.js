@@ -159,42 +159,52 @@ $.ajax({
 
      $("#time6").text("Time: " + time5)
 
-     $("link1").text("Link: " + url)
+     $("#a1").attr({ src: url, target: "_blank"}) 
 
-     $("link2").text("Link: " + url1)
+     $("#a2").attr({ src: url1, target: "_blank"})
 
-     $("link3").text("Link: " + url2)
+     $("#a3").attr({ src: url2, target: "_blank"})
 
-     $("link4").text("Link: " + url3)
+     $("#a4").attr({ src: url3, target: "_blank"})
 
-     $("link5").text("Link: " + url4)
+     $("#a5").attr({ src: url4, target: "_blank"})
 
-     $("link6").text("Link: " + url5)
+     $("#a6").attr({ src: url5, target: "_blank"})
 
+     $("#location1").text("Location: " + cityLocation)
 
+     $("#location2").text("Location: " + cityLocation)
+
+     $("#location3").text("Location: " + cityLocation)
+
+     $("#location4").text("Location: " + cityLocation)
+
+     $("#location5").text("Location: " + cityLocation)
+
+     $("#location6").text("Location: " + cityLocation)
 
 
     });
 
 };
 
-    if ("Chicago") {
-        "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=" + cityLocation + "US&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91"
-    };
+    //if ("Chicago") {
+        //"https://app.ticketmaster.com/discovery/v2/events.json?countryCode=" + cityLocation + "US&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91"
+   // };
 
-    if ("New York") {
-        "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=" + cityLocation + "US&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91"
-    };
-    if ("Los Angeles") {
-        "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=" + cityLocation + "US&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91"
-    };
+    //if ("New York") {
+        //"https://app.ticketmaster.com/discovery/v2/events.json?countryCode=" + cityLocation + "US&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91"
+    //};
+    //if ("Los Angeles") {
+       // "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=" + cityLocation + "US&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91"
+    //};
 
-    if ("Phoenix") {
-        "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=" + cityLocation + "US&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91"
-    };
+    //if ("Phoenix") {
+        //"https://app.ticketmaster.com/discovery/v2/events.json?countryCode=" + cityLocation + "US&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91"
+   // };
 
-    if ("Houston") {
-        "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=" + cityLocation + "US&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91"
-    };
+    //if ("Houston") {
+        //"https://app.ticketmaster.com/discovery/v2/events.json?countryCode=" + cityLocation + "US&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91"
+   // };
 
 });
