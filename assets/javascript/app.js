@@ -159,17 +159,17 @@ $.ajax({
 
      $("#time6").text("Time: " + time5)
 
-     $("#a1").attr({ src: url, target: "_blank"}) 
+     $("#a1").attr({ href: url, target: "_blank"}) 
 
-     $("#a2").attr({ src: url1, target: "_blank"})
+     $("#a2").attr({ href: url1, target: "_blank"})
 
-     $("#a3").attr({ src: url2, target: "_blank"})
+     $("#a3").attr({ href: url2, target: "_blank"})
 
-     $("#a4").attr({ src: url3, target: "_blank"})
+     $("#a4").attr({ href: url3, target: "_blank"})
 
-     $("#a5").attr({ src: url4, target: "_blank"})
+     $("#a5").attr({ href: url4, target: "_blank"})
 
-     $("#a6").attr({ src: url5, target: "_blank"})
+     $("#a6").attr({ href: url5, target: "_blank"})
 
      $("#location1").text("Location: " + cityLocation)
 
