@@ -2,6 +2,7 @@ let date;
 let time; 
 let event;
 let url;
+var images;
 let cityLocation;
 let cityArray = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"]
 
@@ -63,65 +64,83 @@ $.ajax({
      url = r._embedded.events[0].url;
      console.log(url);
 
+     images = r._embedded.events[0].images[0].url;
+     console.log(images)
+
      date1 = r._embedded.events[7].dates.start.localDate;
-     console.log(date);
+     console.log(date1);
 
      time1 = r._embedded.events[7].dates.start.localTime;
-     console.log(time);
+     console.log(time1);
 
      event1 = r._embedded.events[7].name;
-     console.log(event);
+     console.log(event1);
      
      url1 = r._embedded.events[7].url;
-     console.log(url);
+     console.log(url1);
+
+     images1 = r._embedded.events[7].images[0].url;
+     console.log(images1)
 
      date2 = r._embedded.events[4].dates.start.localDate;
-     console.log(date);
+     console.log(date2);
 
      time2 = r._embedded.events[4].dates.start.localTime;
-     console.log(time);
+     console.log(time2);
 
      event2 = r._embedded.events[4].name;
-     console.log(event);
+     console.log(event2);
      
      url2 = r._embedded.events[4].url;
-     console.log(url);
+     console.log(url2);
+
+     images2 = r._embedded.events[4].images[0].url;
+     console.log(images2)
      
      date3 = r._embedded.events[11].dates.start.localDate;
-     console.log(date);
+     console.log(date3);
 
      time3 = r._embedded.events[11].dates.start.localTime;
-     console.log(time);
+     console.log(time3);
 
      event3 = r._embedded.events[11].name;
-     console.log(event);
+     console.log(event3);
      
      url3 = r._embedded.events[11].url;
-     console.log(url);
+     console.log(url3);
+
+     images3 = r._embedded.events[11].images[0].url;
+     console.log(images3)
      
      date4 = r._embedded.events[9].dates.start.localDate;
-     console.log(date);
+     console.log(date4);
 
      time4 = r._embedded.events[9].dates.start.localTime;
-     console.log(time);
+     console.log(time4);
 
      event4 = r._embedded.events[9].name;
-     console.log(event);
+     console.log(event4);
      
      url4 = r._embedded.events[9].url;
-     console.log(url);
+     console.log(url4);
+
+     images4 = r._embedded.events[9].images[0].url;
+     console.log(images4)
      
      date5 = r._embedded.events[16].dates.start.localDate;
-     console.log(date);
+     console.log(date5);
 
      time5 = r._embedded.events[16].dates.start.localTime;
-     console.log(time);
+     console.log(time5);
 
      event5 = r._embedded.events[16].name;
-     console.log(event);
+     console.log(event5);
      
      url5 = r._embedded.events[16].url;
-     console.log(url);
+     console.log(url5);
+
+     images5 = r._embedded.events[16].images[0].url;
+     console.log(images5)
 
      $("#title1").text("Event: " + event);
 
@@ -182,6 +201,18 @@ $.ajax({
      $("#location5").text("Location: " + cityLocation)
 
      $("#location6").text("Location: " + cityLocation)
+
+     $("#img1").attr("src", images)
+
+     $("#img2").attr("src", images1)
+
+     $("#img3").attr("src", images2)
+
+     $("#img4").attr("src", images3)
+
+     $("#img5").attr("src", images4)
+
+     $("#img6").attr("src", images5)
 
 
     });
