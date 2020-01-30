@@ -1,22 +1,245 @@
+body {
+  background: whitesmoke;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+#title {
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  color: white;
+  font-family: 'Raleway';
+  font-size: 1.5rem;
+}
+.gradient-border {
+  --borderWidth: 10px;
+  background: #343a40;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.Iam {
+  padding: 1em 2em;
+  font: normal 40px/50px Montserrat, sans-serif;
+  color: #999;
+}
+.Iam p {
+  height: 50px;
+  float: left;
+  margin-right: 0.3em;
+}
+.Iam b {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+}
+.Iam .innerIam {
+  display: inline-block;
+  color: #3ce7de;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+
+  /*animation*/
+  -webkit-animation: move 8s;
+  -moz-animation: move 8s;
+  -ms-animation: move 8s;
+  -o-animation: move 8s;
+  animation: move 8s;
+  /*animation-iteration-count*/
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  /*animation-delay*/
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+  20% {
+    top: -50px;
+  }
+  40% {
+    top: -100px;
+  }
+  60% {
+    top: -150px;
+  }
+  80% {
+    top: -200px;
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    top: 0px;
+  }
+  20% {
+    top: -50px;
+  }
+  40% {
+    top: -100px;
+  }
+  60% {
+    top: -150px;
+  }
+  80% {
+    top: -200px;
+  }
+}
+@-moz-keyframes move {
+  0% {
+    top: 0px;
+  }
+  20% {
+    top: -50px;
+  }
+  40% {
+    top: -100px;
+  }
+  60% {
+    top: -150px;
+  }
+  80% {
+    top: -200px;
+  }
+}
+@-o-keyframes move {
+  0% {
+    top: 0px;
+  }
+  20% {
+    top: -50px;
+  }
+  40% {
+    top: -100px;
+  }
+  60% {
+    top: -150px;
+  }
+  80% {
+    top: -200px;
+  }
+}
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+  20% {
+    top: -50px;
+  }
+  40% {
+    top: -100px;
+  }
+  60% {
+    top: -150px;
+  }
+  80% {
+    top: -200px;
+  }
+}
+
+/* Bryan style */
 #feedback {
   font-size: 1.4em;
 }
-#selectable .ui-selecting {
-  background: #feca40;
+
+/* removed due to strange highlighting offset, and extending past city name length */
+
+/* *Bryan edit = added font-weight: bold to selected items to make them stand out a bit more */
+#CityName {
+  color: #3ce7de;
 }
-#selectable .ui-selected {
-  background: #f39814;
+
+#submit {
+  background-color: #3ce7de;
+}
+
+#ul-p-text {
   color: white;
 }
+
+#selectable {
+  font-weight: bold;
+  font-size: 24px;
+  color: #3ce7de;
+}
+
 #selectable {
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 60%;
 }
-#selectable li {
-  margin: 3px;
-  padding: 0.4em;
-  font-size: 1.4em;
-  height: 18px;
+
+/* *Bryan edit = removed "#selectable li" took care of the offset issue we had before, spacing bewteen city list can now be tweeked (i couldn't adjust the spacing before) */
+.ui-widget-content {
+  margin: 5px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* *Bryan edit = created p tag between <ul> tags to manipulate text w/o effecting <li> items */
+#ul-p-text {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+/* *Bryan edit = Added a cursor change on hover & transform/transition to make hovered items more dynamic */
+#selectable li:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: transform 150ms;
 }
