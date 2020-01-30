@@ -63,64 +63,64 @@ $.ajax({
      url = r._embedded.events[0].url;
      console.log(url);
 
-     date1 = r._embedded.events[1].dates.start.localDate;
+     date1 = r._embedded.events[7].dates.start.localDate;
      console.log(date);
 
-     time1 = r._embedded.events[1].dates.start.localTime;
+     time1 = r._embedded.events[7].dates.start.localTime;
      console.log(time);
 
-     event1 = r._embedded.events[1].name;
+     event1 = r._embedded.events[7].name;
      console.log(event);
      
-     url1 = r._embedded.events[1].url;
+     url1 = r._embedded.events[7].url;
      console.log(url);
 
-     date2 = r._embedded.events[2].dates.start.localDate;
+     date2 = r._embedded.events[4].dates.start.localDate;
      console.log(date);
 
-     time2 = r._embedded.events[2].dates.start.localTime;
+     time2 = r._embedded.events[4].dates.start.localTime;
      console.log(time);
 
-     event2 = r._embedded.events[2].name;
+     event2 = r._embedded.events[4].name;
      console.log(event);
      
-     url2 = r._embedded.events[2].url;
+     url2 = r._embedded.events[4].url;
      console.log(url);
      
-     date3 = r._embedded.events[3].dates.start.localDate;
+     date3 = r._embedded.events[11].dates.start.localDate;
      console.log(date);
 
-     time3 = r._embedded.events[3].dates.start.localTime;
+     time3 = r._embedded.events[11].dates.start.localTime;
      console.log(time);
 
-     event3 = r._embedded.events[3].name;
+     event3 = r._embedded.events[11].name;
      console.log(event);
      
-     url3 = r._embedded.events[3].url;
+     url3 = r._embedded.events[11].url;
      console.log(url);
      
-     date4 = r._embedded.events[4].dates.start.localDate;
+     date4 = r._embedded.events[9].dates.start.localDate;
      console.log(date);
 
-     time4 = r._embedded.events[4].dates.start.localTime;
+     time4 = r._embedded.events[9].dates.start.localTime;
      console.log(time);
 
-     event4 = r._embedded.events[4].name;
+     event4 = r._embedded.events[9].name;
      console.log(event);
      
-     url4 = r._embedded.events[4].url;
+     url4 = r._embedded.events[9].url;
      console.log(url);
      
-     date5 = r._embedded.events[5].dates.start.localDate;
+     date5 = r._embedded.events[16].dates.start.localDate;
      console.log(date);
 
-     time5 = r._embedded.events[5].dates.start.localTime;
+     time5 = r._embedded.events[16].dates.start.localTime;
      console.log(time);
 
-     event5 = r._embedded.events[5].name;
+     event5 = r._embedded.events[16].name;
      console.log(event);
      
-     url5 = r._embedded.events[5].url;
+     url5 = r._embedded.events[16].url;
      console.log(url);
 
      $("#title1").text("Event: " + event);
