@@ -58,7 +58,7 @@ $.ajax({
      console.log(time);
 
      event = r._embedded.events[0].name;
-     console.log(city);
+     console.log(event);
      
      url = r._embedded.events[0].url;
      console.log(url);
@@ -70,7 +70,7 @@ $.ajax({
      console.log(time);
 
      event1 = r._embedded.events[1].name;
-     console.log(city);
+     console.log(event);
      
      url1 = r._embedded.events[1].url;
      console.log(url);
@@ -82,7 +82,7 @@ $.ajax({
      console.log(time);
 
      event2 = r._embedded.events[2].name;
-     console.log(city);
+     console.log(event);
      
      url2 = r._embedded.events[2].url;
      console.log(url);
@@ -94,7 +94,7 @@ $.ajax({
      console.log(time);
 
      event3 = r._embedded.events[3].name;
-     console.log(city);
+     console.log(event);
      
      url3 = r._embedded.events[3].url;
      console.log(url);
@@ -106,7 +106,7 @@ $.ajax({
      console.log(time);
 
      event4 = r._embedded.events[4].name;
-     console.log(city);
+     console.log(event);
      
      url4 = r._embedded.events[4].url;
      console.log(url);
@@ -118,7 +118,7 @@ $.ajax({
      console.log(time);
 
      event5 = r._embedded.events[5].name;
-     console.log(city);
+     console.log(event);
      
      url5 = r._embedded.events[5].url;
      console.log(url);
@@ -159,17 +159,17 @@ $.ajax({
 
      $("#time6").text("Time: " + time5)
 
-     $("link1").text("Link: " + link)
+     $("link1").text("Link: " + url)
 
-     $("link2").text("Link: " + link1)
+     $("link2").text("Link: " + url1)
 
-     $("link3").text("Link: " + link2)
+     $("link3").text("Link: " + url2)
 
-     $("link4").text("Link: " + link3)
+     $("link4").text("Link: " + url3)
 
-     $("link5").text("Link: " + link4)
+     $("link5").text("Link: " + url4)
 
-     $("link6").text("Link: " + link5)
+     $("link6").text("Link: " + url5)
 
 
 
