@@ -56,8 +56,10 @@ $(document).ready(function(){
         });
     };
 
-    $("#submit").on("click", function(){
-        currentLocation = $("#search").val().trim().toLowerCase();
+    $("#submit").on("click", function(event){
+        event.preventDefault();
+        cityLocation = $("#search").val().trim();
+        console.log(cityLocation);
         ajaxCallOWM();
         ajaxCall();
     });
