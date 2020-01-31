@@ -214,7 +214,7 @@ $(document).ready(function(){
         type:"GET",
         url: queryURL2,
          }).then(function(response) {
-            console.log(queryURL)
+           console.log(queryURL2)
          let r = response;
     
          date = r._embedded.events[0].dates.start.localDate;
