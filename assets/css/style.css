@@ -244,3 +244,16 @@ S
 .hide-link {
   display: none;
 }
+
+.div-title {
+  background-image: linear-gradient(to left, white, #00ffbf);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.div-main-title {
+  background-image: linear-gradient(to left, white, #00ffbf);
+    -webkit-background-clip: text;
+    color: transparent;
+}
