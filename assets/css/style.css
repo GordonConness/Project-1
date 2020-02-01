@@ -208,7 +208,7 @@ body {
 }
 
 #ul-p-text {
-  color:  #3ce7de;
+  color:  white;
 }
 
 #selectable .ui-selected { /* !!! Missing '.ui-selected' after 'selectable' !!! */
@@ -222,6 +222,7 @@ body {
   margin: 0;
   padding: 0;
   width: 60%;
+  color:  #3ce7de
 }
 
 /* *Bryan edit = removed "#selectable li" took care of the offset issue we had before, spacing bewteen city list can now be tweeked (i couldn't adjust the spacing before) */
