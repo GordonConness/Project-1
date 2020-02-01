@@ -17,7 +17,7 @@ let event;
 let url;
 var images;
 // City array list we will use and loop through in our for loop to create list items and assign data-names
-let cityArray= ["New York", "Los Angeles", "Chicago", "Huston", "Phoenix"]
+let cityArray= ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"]
 
 
 
