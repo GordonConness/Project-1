@@ -60,13 +60,13 @@ In Javascript We make use of a for loop to develop a city list to the dom from t
 
 ##### Two onClicks
 
--There is an on click for each city <li> item by class, that assigns the variable cityLocation the data-name assigned to each city inside the for-loop. Once cityLocation is defined the 2 AJAX functions are called.
+-There is an on click for each city 'li' item by class, that assigns the variable cityLocation the data-name assigned to each city inside the for-loop. Once cityLocation is defined the 2 AJAX functions are called.
 
 -The next onClick is for the submit button to search a city based on the inputted location. Inside the onClick, cityLocation is defined from the input fields value, and then both AJAX functions are called.
 
 The anime function is used to animate the city li over to the right when selected. This is done by changing the x-position. When a city is selected, its' siblings are reverted back to the original position.
 
-The selectable method is used to make the <ul> list with id "selectable" select a specific city by applying and removing classes (ex. bg-color, text-color, font-size).
+The selectable method is used to make the 'ul' list with id "selectable" select a specific city by applying and removing classes (ex. bg-color, text-color, font-size).
 
 ##### Each AJAX call
 
