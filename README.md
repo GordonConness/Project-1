@@ -1,10 +1,25 @@
 This is project one, with Hue, Bryan and I being the collaborators. 
 
-# Train-Scheduler
+# Project-1 - WENT
 
 ## What is this repo?
 
+This Repo is for Bootcamp Project-1, its is a collaborated project between Gordon, Hue, and Bryan.
 
+-Its purpose was to create a website with a team, dividing responsibilities while working together to achieve the overall goal. Practicing what it means to work with a team of other developers.
+
+## Project Requirements
+
+-Use at least two APIs.
+-Use AJAX to pull data.
+-Use at least one new library or technology that hasn't been discussed.
+-Create a polished front end/UI.
+-Meet good quality coding standards.
+-Do NOT use alerts, confirms, or prompts.
+-Incorporate some sort of repeating element.
+-Use Bootstrap or an alternative CSS framework.
+-Deploy your site to GitHub Pages.
+-Include user input validation.
 
 ## How was this project created?
 
@@ -18,6 +33,24 @@ This is project one, with Hue, Bryan and I being the collaborators.
 
 -assets folder created to hold CSS code, JS code, and images. 
 
+-Anime.js was used to animate the top city list. For further information please see (https://animejs.com/)
+
+-JqueryUI was used to make the city list elements "selectable". For further information please see (https://jqueryui.com/).
+
+### API's
+
+#### OpenWeatherMap ####
+
+ Api available at (https://home.openweathermap.org/). Create a free account to receive and API key for use.
+
+ -Please read API documentation for further explanation of what APIs are available and how to use/work with them.
+
+
+#### Ticket Master ####
+
+ Api available at (https://developer.ticketmaster.com/). Create a free account to receive and API key for use.
+
+ -Please read API documentation for further explanation of what APIs are available and how to use/work with them.
 
 ### JqueryUI
 
