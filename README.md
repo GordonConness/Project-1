@@ -1,6 +1,6 @@
-This is project one, with Hue (pprchang), Bryan (Bauter) and I (GordonConness) being the collaborators. 
-
 # Project-1 - WENT
+
+This is project one, with Hue (pprchang), Bryan (Bauter) and I (GordonConness) being the collaborators. 
 
 ## What is this repo?
 
