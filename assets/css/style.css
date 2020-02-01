@@ -225,12 +225,7 @@ body {
 }
 
 /* *Bryan edit = removed "#selectable li" took care of the offset issue we had before, spacing bewteen city list can now be tweeked (i couldn't adjust the spacing before) */
-.ui-widget-content {
-  margin: 5px;
-  font-size: 20px;
-  text-decoration: none;
-  color: #3ce7de;
-}
+S
 
 /* *Bryan edit = created p tag between <ul> tags to manipulate text w/o effecting <li> items */
 #ul-p-text {
@@ -243,4 +238,8 @@ body {
   cursor: pointer;
   transform: translateY(-2px);
   transition: transform 150ms;
+}
+
+.hide-link {
+  display: none;
 }
