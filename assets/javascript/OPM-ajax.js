@@ -78,7 +78,7 @@ $(document).ready(function(){
     function ajaxCallOWM () {
         
 
-        let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityLocation + "&units=imperial&APPID=9082a48918ffcc2e91530e4ffabb6e1e"
+        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityLocation + "&units=imperial&APPID=9082a48918ffcc2e91530e4ffabb6e1e"
 
         // AJAX call to retrieve API data
         $.ajax({
@@ -145,37 +145,37 @@ $(document).ready(function(){
             // rainyArray for img "10d"
             for (var a = 0; a < rainyArray.length; a++) {
                 if (weatherID == rainyArray[a]) {
-                    $("#img").attr("src", "http://openweathermap.org/img/wn/10d@2x.png");
+                    $("#img").attr("src", "https://openweathermap.org/img/wn/10d@2x.png");
                 };
             };
             // drizzleArray for img "09d"
             for (var b = 0; b < drizzleArray.length; b++) {
                 if (weatherID == drizzleArray[b]) {
-                    $("#img").attr("src", "http://openweathermap.org/img/wn/09d@2x.png");
+                    $("#img").attr("src", "https://openweathermap.org/img/wn/09d@2x.png");
                 };
             };
             // snowyArray for img "13d"
             for (var c = 0; c < snowyArray.length; c++) {
                 if (weatherID == snowyArray[c]) {
-                    $("#img").attr("src", "http://openweathermap.org/img/wn/13d@2x.png");
+                    $("#img").attr("src", "https://openweathermap.org/img/wn/13d@2x.png");
                 };
             };
             // atmosphereArray for img "50d"
             for (var d = 0; d < atmosphereArray.length; d++) {
                 if (weatherID == atmosphereArray[d]) {
-                    $("#img").attr("src", "http://openweathermap.org/img/wn/50d@2x.png");
+                    $("#img").attr("src", "https://openweathermap.org/img/wn/50d@2x.png");
                 };
             };
             // stormyArray for img "11d"
             for (var e = 0; e < stormyArray.length; e++) {
                 if (weatherID == stormyArray[e]) {
-                    $("#img").attr("src", "http://openweathermap.org/img/wn/11d@2x.png");
+                    $("#img").attr("src", "https://openweathermap.org/img/wn/11d@2x.png");
                 };
             };
             // heavyCloudArray for img "04d"
             for (var f = 0; f < heavyCloudArray.length; f++) {
                 if (weatherID == heavyCloudArray[f]) {
-                    $("#img").attr("src", "http://openweathermap.org/img/wn/04d@2x.png");
+                    $("#img").attr("src", "https://openweathermap.org/img/wn/04d@2x.png");
                 };
             };
 
@@ -183,15 +183,15 @@ $(document).ready(function(){
 
             // clearySky for img "01d"
             if (weatherID == clearSky) {
-                $("#img").attr("src", "http://openweathermap.org/img/wn/01d@2x.png");
+                $("#img").attr("src", "https://openweathermap.org/img/wn/01d@2x.png");
 
             // fewClouds for img "02d"  
             } else if (weatherID == fewClouds) {
-                $("#img").attr("src", "http://openweathermap.org/img/wn/02d@2x.png");
+                $("#img").attr("src", "https://openweathermap.org/img/wn/02d@2x.png");
 
             // scatClouds for img "03d"
             } else if (weatherID == scatClouds) {
-                $("#img").attr("src", "http://openweathermap.org/img/wn/03d@2x.png");
+                $("#img").attr("src", "https://openweathermap.org/img/wn/03d@2x.png");
             };
 
             //example of possible conditional statement we could make use of

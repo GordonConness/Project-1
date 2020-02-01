@@ -33,7 +33,7 @@ This Repo is for Bootcamp Project-1, its is a collaborated project between Gordo
 
 -assets folder created to hold CSS code, JS code, and images. 
 
--Anime.js was used to animate the top city list. For further information please see (https://animejs.com/)
+-Anime.js was used to animate the top city list. For further information please see (https://animejs.com/).
 
 -JqueryUI was used to make the city list elements "selectable". For further information please see (https://jqueryui.com/).
 
