@@ -1,4 +1,4 @@
-This is project one, with Hue, Bryan and I being the collaborators. 
+This is project one, with Hue (pprchang), Bryan (Bauter) and I (GordonConness) being the collaborators. 
 
 # Project-1 - WENT
 
