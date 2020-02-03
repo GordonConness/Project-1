@@ -245,13 +245,6 @@ S
   display: none;
 }
 
-/* .div-title {
-  background-image: linear-gradient(to left, white, rgb(62, 145, 241));
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
-} */
-
 .div-main-title {
   background-image: linear-gradient(to left, white, rgb(62, 145, 241));
   -webkit-background-clip: text;

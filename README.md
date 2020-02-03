@@ -1,6 +1,10 @@
 # Project-1 - WENT
 
+<<<<<<< HEAD
 This is project one, with Hue (pprchang), Bryan (Bauter) and I (GordonConness) being the collaborators.
+=======
+This is project one, with Hue (pprchang), Bryan (Bauter) and I (GordonConness) being the collaborators. 
+>>>>>>> c3713a801e2f0e61b565092b7dfcd64350ada285
 
 ## What is this repo?
 
@@ -29,11 +33,19 @@ This Repo is for UWM web-dev. boot-camp Project-1, its is a collaborated project
 
 -Bootstrap was linked via CDN inside the 'head' tags within an opening script tag, Bootstrap conveniently offers these links on there side and are ready to be copied and pasted into the html file.
 
+<<<<<<< HEAD
 -Local CSS file created and used to style. Linked in between 'head' tags and within an opening 'script' tag, the file path relative to the html file, and closed by a closing script tag.
 
 -assets folder created to hold CSS code, JS code, and images.
 
 ### Libraries
+=======
+-Local CSS file created and used to style. Linked in between 'head' tags and within an opening 'script' tag, the file path relative to the html file, and closed by a closing script tag. 
+
+-assets folder created to hold CSS code, JS code, and images. 
+
+### Libraries 
+>>>>>>> c3713a801e2f0e61b565092b7dfcd64350ada285
 
 -Anime.js was used to animate the top city list. For further information please see (https://animejs.com/).
 
@@ -41,6 +53,7 @@ This Repo is for UWM web-dev. boot-camp Project-1, its is a collaborated project
 
 ### API's
 
+<<<<<<< HEAD
 #### OpenWeatherMap
 
 Api available at (https://home.openweathermap.org/). Create a free account to receive and API key for use.
@@ -52,6 +65,20 @@ Api available at (https://home.openweathermap.org/). Create a free account to re
 Api available at (https://developer.ticketmaster.com/). Create a free account to receive and API key for use.
 
 -Please read API documentation for further explanation of what APIs are available and how to use/work with them.
+=======
+#### OpenWeatherMap 
+
+ Api available at (https://home.openweathermap.org/). Create a free account to receive and API key for use.
+
+ -Please read API documentation for further explanation of what APIs are available and how to use/work with them.
+
+
+#### Ticket Master 
+
+ Api available at (https://developer.ticketmaster.com/). Create a free account to receive and API key for use.
+
+ -Please read API documentation for further explanation of what APIs are available and how to use/work with them.
+>>>>>>> c3713a801e2f0e61b565092b7dfcd64350ada285
 
 ### Jquery/Javascript
 
@@ -71,7 +98,11 @@ The selectable method is used to make the 'ul' list with id "selectable" select 
 
 -Uses the .then() method after the AJAX call to utilize the response-data and decide what to do with it.
 
+<<<<<<< HEAD
 ###### Inside each then block
+=======
+###### Inside each then block 
+>>>>>>> c3713a801e2f0e61b565092b7dfcd64350ada285
 
 -variables are assigned different data by path from the response. These variables are then used via DOM manipulation to display them to the page in a variety of different ways. (ex. use .text() to display text, use .attr() to assign specific src/urls, and .html() to create html elements.)
 
@@ -79,4 +110,9 @@ The selectable method is used to make the 'ul' list with id "selectable" select 
 
 #### Guidelines for Collaboration
 
+<<<<<<< HEAD
 Any advice and comments for this project are appreciated. All pull requests will require approval. Again, this project was created for UWM Web dev. boot-camp as a learning experience for working in groups to create a collaborative project.
+=======
+Any advice and comments for this project are appreciated. All pull requests will require approval. Again, this project was created for UWM Web dev. boot-camp as a learning experience for working in groups to create a collaborative project. 
+
+>>>>>>> c3713a801e2f0e61b565092b7dfcd64350ada285
