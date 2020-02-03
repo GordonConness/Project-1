@@ -6,11 +6,7 @@ let weatherID;
 let mainWeather;
 let weatherDescription;
 let temp;
-let humidity;
 let city;
-let country;
-let longitude;
-let latitude;
 let date;
 let time;
 let event;
@@ -47,9 +43,7 @@ $(document).ready(function() {
         easing: 'easeOutSine'
       });
 
-      $(this)
-        .siblings()
-        .css({ transform: 'translatex(0)', transition: 'transform 200ms' });
+      $(this).siblings().css({ transform: 'translatex(0)', transition: 'transform 200ms' });
     });
   }
 
@@ -74,10 +68,7 @@ $(document).ready(function() {
 
   // Function in which our ajax call is defined accessing OpenWeatherMap API data based on cityLocation [wrapped in function to call inside on click function]
   function ajaxCallOWM() {
-    let queryURL =
-      'https://api.openweathermap.org/data/2.5/weather?q=' +
-      cityLocation +
-      '&units=imperial&APPID=9082a48918ffcc2e91530e4ffabb6e1e';
+    let queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityLocation + '&units=imperial&APPID=9082a48918ffcc2e91530e4ffabb6e1e';
 
     // AJAX call to retrieve API data
     $.ajax({
@@ -102,64 +93,19 @@ $(document).ready(function() {
       temp = Math.ceil(RD.main.temp);
       console.log(temp);
 
-      //humidity
-      humidity = RD.main.humidity;
-      console.log(humidity);
-
       //city
       city = RD.name;
       console.log(city);
 
-      //country
-      country = RD.sys.country;
-      console.log(country);
-
-      //longitude coord.
-      longitude = RD.coord.lon;
-      console.log(longitude);
-
-      //latitude coord
-      latitude = RD.coord.lat;
-      console.log(latitude);
-
       // Used to manipulate DOM with API information
       $('#CityName').text(city);
       $('#temperature').html('Temp: ' + temp + ' &#x2109'); // has to be .html to get degrees fahrenheit symbol to show
-      $('#description').html(
-        'Weather Description: ' + '<br>' + weatherDescription
-      );
+      $('#description').html('Weather Description: ' + '<br>' + weatherDescription);
 
       // Variables to compare API weather ID "weatherID" to for icon img
       let rainyArray = [500, 501, 502, 503, 504];
-      let drizzleArray = [
-        300,
-        301,
-        302,
-        310,
-        311,
-        312,
-        313,
-        314,
-        321,
-        520,
-        521,
-        522,
-        531
-      ];
-      let snowyArray = [
-        600,
-        601,
-        602,
-        611,
-        612,
-        613,
-        615,
-        616,
-        620,
-        621,
-        622,
-        511
-      ];
+      let drizzleArray = [300, 301, 302, 310, 311, 312, 313, 314, 321, 520, 521, 522, 531];
+      let snowyArray = [600, 601, 602, 611, 612, 613, 615, 616, 620, 621, 622, 511];
       let atmosphereArray = [701, 711, 721, 731, 741, 751, 761, 762, 771, 781];
       let stormyArray = [200, 201, 202, 210, 211, 212, 221, 230, 231, 232];
       let clearSky = 800;
@@ -233,10 +179,7 @@ $(document).ready(function() {
 
   // Gordons ajax call combined with my logic file
   function ajaxCall() {
-    let queryURL2 =
-      'https://app.ticketmaster.com/discovery/v2/events.json?city=' +
-      cityLocation +
-      '&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91';
+    let queryURL2 = 'https://app.ticketmaster.com/discovery/v2/events.json?city=' + cityLocation + '&apikey=ZU6tUNza7rOj3h1LboOtt2McTHU7RH91';
 
     $.ajax({
       type: 'GET',
