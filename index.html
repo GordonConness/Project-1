@@ -21,9 +21,13 @@
     <!--JQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!--JQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <!--Anime.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
 
+    <script src="assets/javascript/OPM-ajax.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
       rel="stylesheet"
@@ -36,13 +40,13 @@
     <!--Title-->
     <div class="card">
       <div class="gradient-border" id="box">
-        <h1 id="title">Went</h1>
+        <h1 id="title" class="div-main-title">Went</h1>
         <br />
         <div class="Iam">
           <b>
             <div class="innerIam">
               Current Weather<br />
-              Up Coming Events<br />
+              Upcoming Events<br />
               at a Glance<br />
             </div>
           </b>
@@ -57,7 +61,7 @@
 
     <div class="card">
       <div class="card-header bg-dark text-white text-center">
-        <h2>Current Weather</h2>
+        <h2 class="div-title">Current Weather</h2>
       </div>
       <div class="card-body">
         <!--Display current weather-->
@@ -79,9 +83,8 @@
           </div>
         </div>
         <div id="container" class="bg-dark text-white p-5 rounded">
-          <ul id="selectable">
-            <p id="ul-p-text">Select a city to get the weather:</p>
-          </ul>
+          <h4 id="ul-p-text">Major Cities in the U.S.</h4>
+          <ul id="selectable" class="font-weight-bold"></ul>
         </div>
         <!-- Search -->
         <div class="card-body">
@@ -94,7 +97,7 @@
                 type="text"
                 class="form-control"
                 id="search"
-                placeholder="City, State"
+                placeholder="City"
               />
             </div>
             <button id="submit" type="submit" class="btn mb-2 font-weight-bold">
@@ -113,79 +116,46 @@
 
     <div class="card">
       <div class="card-header bg-dark text-white text-center">
-        <h2>Up Coming Events</h2>
+        <h2 class="div-title">Upcoming Events</h2>
       </div>
       <div class="card-body">
         <div class="card-group">
           <div class="card p-2 m-1 bg-dark">
-            <img
-              id="img1"
-              src="assets/images/super.jpg"
-              class="card-img-top rounded-lg"
-              alt="Super Bowl"
-            />
+            <img id="img1" class="card-img-top rounded-lg" />
             <div class="card-body text-white font-weight-bold">
-              <h5 id="title1" class="card-title">2020 Super Bowl</h5>
-              <p id="location1" class="card-text">
-                Location: Kansas City
-              </p>
-              <p id="date1" class="card-text">
-                Date: Sunday, 2/2/2020
-              </p>
-              <p id="time1" class="card-text">
-                Time: 5:40 PM
-              </p>
-              <p id="link1" class="card-text">
-                Ticket Master Link
-                <a id="a1">Click Here </a>
+              <h5 id="title1" class="card-title"></h5>
+              <p id="location1" class="card-text"></p>
+              <p id="date1" class="card-text"></p>
+              <p id="time1" class="card-text"></p>
+              <p id="link1" class="card-text hide-link">
+                Ticket Master Link:
+                <a id="a1" class="hide-link">Click Here </a>
               </p>
             </div>
           </div>
           <div class="card p-2 m-1 bg-dark">
-            <img
-              id="img2"
-              src="assets/images/super.jpg"
-              class="card-img-top"
-              alt="Super Bowl"
-            />
+            <img id="img2" s class="card-img-top rounded-lg" />
             <div class="card-body text-white font-weight-bold">
-              <h5 id="title2" class="card-title">2020 Super Bowl</h5>
-              <p id="location2" class="card-text">
-                Location: Kansas City
-              </p>
-              <p id="date2" class="card-text">
-                Date: Sunday, 2/2/2020
-              </p>
-              <p id="time2" class="card-text">
-                Time: 5:40 PM
-              </p>
-              <p id="link2" class="card-text">
-                Ticket Master Link
-                <a id="a2">Click Here </a>
+              <h5 id="title2" class="card-title"></h5>
+              <p id="location2" class="card-text"></p>
+              <p id="date2" class="card-text"></p>
+              <p id="time2" class="card-text"></p>
+              <p id="link2" class="card-text hide-link">
+                Ticket Master Link:
+                <a id="a2" class="hide-link">Click Here </a>
               </p>
             </div>
           </div>
           <div class="card p-2 m-1 bg-dark">
-            <img
-              id="img3"
-              src="assets/images/super.jpg"
-              class="card-img-top"
-              alt="Super Bowl"
-            />
+            <img id="img3" class="card-img-top rounded-lg" />
             <div class="card-body font-weight-bold text-white">
-              <h5 id="title3" class="card-title">2020 Super Bowl</h5>
-              <p id="location3" class="card-text">
-                Location: Kansas City
-              </p>
-              <p id="date3" class="card-text">
-                Date: Sunday, 2/2/2020
-              </p>
-              <p id="time3" class="card-text">
-                Time: 5:40 PM
-              </p>
-              <p id="link3" class="card-text">
-                Ticket Master Link
-                <a id="a3">Click Here </a>
+              <h5 id="title3" class="card-title"></h5>
+              <p id="location3" class="card-text"></p>
+              <p id="date3" class="card-text"></p>
+              <p id="time3" class="card-text"></p>
+              <p id="link3" class="card-text hide-link">
+                Ticket Master Link:
+                <a id="a3" class="hide-link">Click Here </a>
               </p>
             </div>
           </div>
@@ -197,74 +167,41 @@
 
         <div class="card-group">
           <div class="card p-2 m-1 bg-dark">
-            <img
-              id="img4"
-              src="assets/images/super.jpg"
-              class="card-img-top rounded-lg"
-              alt="Super Bowl"
-            />
+            <img id="img4" class="card-img-top rounded-lg" />
             <div class="card-body text-white font-weight-bold">
-              <h5 id="title4" class="card-title">2020 Super Bowl</h5>
-              <p id="location4" class="card-text">
-                Location: Kansas City
-              </p>
-              <p id="date4" class="card-text">
-                Date: Sunday, 2/2/2020
-              </p>
-              <p id="time4" class="card-text">
-                Time: 5:40 PM
-              </p>
-              <p id="link4" class="card-text">
-                Ticket Master Link
-                <a id="a4">Click Here </a>
+              <h5 id="title4" class="card-title"></h5>
+              <p id="location4" class="card-text"></p>
+              <p id="date4" class="card-text"></p>
+              <p id="time4" class="card-text"></p>
+              <p id="link4" class="card-text hide-link">
+                Ticket Master Link:
+                <a id="a4" class="hide-link">Click Here </a>
               </p>
             </div>
           </div>
           <div class="card p-2 m-1 bg-dark">
-            <img
-              id="img5"
-              src="assets/images/super.jpg"
-              class="card-img-top"
-              alt="Super Bowl"
-            />
+            <img id="img5" class="card-img-top rounded-lg" />
             <div class="card-body text-white font-weight-bold">
-              <h5 id="title5" class="card-title">2020 Super Bowl</h5>
-              <p id="location5" class="card-text">
-                Location: Kansas City
-              </p>
-              <p id="date5" class="card-text">
-                Date: Sunday, 2/2/2020
-              </p>
-              <p id="time5" class="card-text">
-                Time: 5:40 PM
-              </p>
-              <p id="link5" class="card-text">
-                Ticket Master Link
-                <a id="a5">Click Here </a>
+              <h5 id="title5" class="card-title"></h5>
+              <p id="location5" class="card-text"></p>
+              <p id="date5" class="card-text"></p>
+              <p id="time5" class="card-text"></p>
+              <p id="link5" class="card-text hide-link">
+                Ticket Master Link:
+                <a id="a5" class="hide-link">Click Here </a>
               </p>
             </div>
           </div>
           <div class="card p-2 m-1 bg-dark">
-            <img
-              id="img6"
-              src="assets/images/super.jpg"
-              class="card-img-top"
-              alt="Super Bowl"
-            />
+            <img id="img6" class="card-img-top rounded-lg" />
             <div class="card-body font-weight-bold text-white">
-              <h5 id="title6" class="card-title">2020 Super Bowl</h5>
-              <p id="location6" class="card-text">
-                Location: Kansas City
-              </p>
-              <p id="date6" class="card-text">
-                Date: Sunday, 2/2/2020
-              </p>
-              <p id="time6" class="card-text">
-                Time: 5:40 PM
-              </p>
-              <p id="link6" class="card-text">
-                Ticket Master Link
-                <a id="a6">Click Here </a>
+              <h5 id="title6" class="card-title"></h5>
+              <p id="location6" class="card-text"></p>
+              <p id="date6" class="card-text"></p>
+              <p id="time6" class="card-text"></p>
+              <p id="link6" class="card-text hide-link">
+                Ticket Master Link:
+                <a id="a6" class="hide-link">Click Here </a>
               </p>
             </div>
           </div>
@@ -278,7 +215,7 @@
 
     <!--Footer-->
     <div class="card">
-      <h5 class="card-header text-center text-white bg-dark p-5">
+      <h5 class="card-header text-center text-white bg-dark p-5 div-title">
         Copyright &copy; 2020
       </h5>
     </div>
@@ -298,6 +235,6 @@
     ></script>
 
     <!--Javascript-->
-    <script src="assets/javascript/app.js"></script>
+    <!-- <script src="assets/javascript/OPM-ajax.js"></script> -->
   </body>
 </html>
