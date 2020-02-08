@@ -2,6 +2,10 @@
 
 This is project one, with Hue (pprchang), Bryan (Bauter) and I (GordonConness) being the collaborators.
 
+### Link to Project-1 Live-pages ###
+
+https://gordonconness.github.io/Project-1/
+
 ## What is this repo?
 
 This Repo is for UWM web-dev. boot-camp Project-1, its is a collaborated project between Gordon, Hue, and Bryan.
