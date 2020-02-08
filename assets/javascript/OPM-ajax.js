@@ -48,14 +48,21 @@ $(document).ready(function() {
   }
 
   $('#submit').on('click', function(event) {
-    event.preventDefault();
+   
     cityLocation = $('#search')
       .val()
       .trim();
-    console.log(cityLocation);
-    ajaxCallOWM();
-    ajaxCall();
-    $('.hide-link').show();
+
+    if( $('#search').val() !== "") {
+      event.preventDefault();
+      console.log(cityLocation);
+      ajaxCallOWM();
+      ajaxCall();
+      $('.hide-link').show();
+      $('#events-div').show();
+      
+    } else { }
+   
   });
 
   // Used to utilize jqueryUI selectable function
