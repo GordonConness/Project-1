@@ -6,6 +6,8 @@ This is project one, with Hue (pprchang), Bryan (Bauter) and I (GordonConness) b
 
 https://gordonconness.github.io/Project-1/
 
+![went-app](went.gif)
+
 ## What is this repo?
 
 This Repo is for UWM web-dev. boot-camp Project-1, its is a collaborated project between Gordon, Hue, and Bryan.
